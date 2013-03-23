@@ -1,0 +1,47 @@
+using System;
+
+namespace Student
+{
+    class TestStudentProgram
+    {
+        static void Main()
+        {
+            //Initialize some students
+            Student student1 = new Student("Ivan", "Ivanov", "Ivanov", 7823031614u, "Sofia", "89898989", "ivaniv@gmail.com", 1, Student.University.Sofia_University, Student.Faculty.Mathematics_and_informatics, Student.Specialty.Informatics);
+
+            Student student2 = new Student("Ivan", "Petrov", "Ivanov", 7823052620u, "Sofia", "4544454", "ivaniv@gmail.com", 3, Student.University.Sofia_University, Student.Faculty.Economics_and_Management, Student.Specialty.Business_Administration);
+
+            Student student3 = new Student("Ivan", "Petrov", "Ivanov", 7823052620u, "Sofia", "4544454", "ivaniv@gmail.com", 1, Student.University.Technical_University, Student.Faculty.Mathematics_and_informatics, Student.Specialty.Informatics);
+
+            Console.WriteLine("DEMO OF Student.ToString()");
+            Console.WriteLine("Student 1: {0}", student1);
+            Console.WriteLine("Student 2: {0}", student2);
+            Console.WriteLine("Student 3: {0}", student3);
+
+            Console.WriteLine("DEMO OF EQUALS");
+            Console.WriteLine("Does student1 equal student2? {0}", student1.Equals(student2));
+            Console.WriteLine("Does student2 equal student3? {0}", student2.Equals(student3));
+            Console.WriteLine();
+
+            Console.WriteLine("DEMO OF OPERATOR ==");
+            Console.WriteLine("student1 == student2? {0}", student1 == student2);
+            Console.WriteLine("student2 == student3? {0}", student2 == student3);
+            Console.WriteLine();
+
+            Console.WriteLine("DEMO OF OPERATOR !=");
+            Console.WriteLine("student1 != student2? {0}", student1 != student2);
+            Console.WriteLine("student2 != student3? {0}", student2 != student3);
+            Console.WriteLine();
+
+            Console.WriteLine("DEMO OF GetHashCode");
+            Console.WriteLine("Student1 hashcode = {0}", student1.GetHashCode());
+            Console.WriteLine("Student2 hashcode = {0}", student2.GetHashCode());
+            Console.WriteLine("Student3 hashcode = {0}", student3.GetHashCode());
+            Console.WriteLine();
+
+            Console.WriteLine("DEMO OF CompareTo");
+            Console.WriteLine("student1.CompareTo(student2) : {0}", student1.CompareTo(student2));
+            Console.WriteLine("student2.CompareTo(student3) : {0}", student2.CompareTo(student3));
+        }
+    }
+}
